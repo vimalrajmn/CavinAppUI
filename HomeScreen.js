@@ -174,7 +174,7 @@ const HomeScreen = () => {
     if (loading) {
         return (
             <View style={[styles.container, styles.loadingContainer]}>
-                <ActivityIndicator size="large" color="#0000ff" />
+                <ActivityIndicator size="large" color="#0000ff" testID='loading-indicator' />
             </View>
         );
     }
@@ -194,8 +194,8 @@ const HomeScreen = () => {
                     <Image source={require('./images/setting.png')} style={styles.settingsIconLeft} />
                     </TouchableOpacity>
                     
-                    <TouchableOpacity style={styles.settingsIconRight} onPress={handleRightIconPress}>
-                    <Image source={require('./images/avataricon.png')} style={styles.settingsIconRight} />
+                    <TouchableOpacity style={styles.settingsIconRight} onPress={handleRightIconPress} testID='avatar-icon'>
+                    <Image source={require('./images/avataricon.png')} style={styles.settingsIconRight} /> 
                     </TouchableOpacity>
                 </View>
 
@@ -234,9 +234,11 @@ const HomeScreen = () => {
                     animationType="slide"
                     transparent={true}
                     onRequestClose={closeModal}
+                    testID='User Info'
+                    
                 >
-                    <View style={styles.modalContainer}>
-                        <View style={styles.modalContent}>
+                     <View style={styles.modalContainer} >  
+                        <View style={styles.modalContent} >
                             <Text style={styles.modalTitle}>User Info</Text>
                             <Text style={styles.modalText}>Name: {userInfo.name}</Text>
                             <Text style={styles.modalText}>Age: {userInfo.age}</Text>

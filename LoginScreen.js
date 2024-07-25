@@ -80,7 +80,7 @@ const LoginScreen = ({ navigation }) => {
                 />
 
                 <Button title="Submit" onPress={saveData} />
-            </View>
+            </View> 
         </TouchableWithoutFeedback>
     );
 };
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     heading: {
         fontSize: 20,

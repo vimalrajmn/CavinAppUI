@@ -10,7 +10,7 @@ const ProductScreen = ({ route }) => {
             <View>
                 <Text style={styles.text}>Product Screen Display</Text>
             </View>
-            <Image source={{ uri: imageUrl }} style={styles.image} />
+            <Image source={{ uri: imageUrl }} style={styles.image} testID="product-image" />
         </View>
     );
 };
@@ -35,3 +35,4 @@ const styles = StyleSheet.create({
 });
 
 export default ProductScreen;
+
